@@ -1,0 +1,42 @@
+p {
+    margin: 50px;
+    font-size: 29px;
+    color: darkred;
+   
+
+}
+h1 {
+    font-size: 45px;
+    text-align: center;
+    background-color:darkred;
+    font-family: "helvetica neue", helvetica, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 2px solid rgba(0, 0, 200, 0.6);
+    background: rgba(0, 0, 200, 0.3);
+    color: rgba(0, 0, 200, 0.6);
+    box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
+    border-radius: 10px;
+    padding: 3px 10px;
+    
+    cursor: pointer;
+}
+h2 {
+    font-size: 30px;
+    background-color:darkred;
+    font-family: "helvetica neue", helvetica, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 2px solid rgba(0, 0, 200, 0.6);
+    background: rgba(0, 0, 200, 0.3);
+    color: rgba(0, 0, 200, 0.6);
+    box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
+    border-radius: 10px;
+    padding: 3px 10px;
+    
+    cursor: pointer;
+    text-align: center;
+}
+body {
+    background-color: pink;
+}
