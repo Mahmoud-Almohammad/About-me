@@ -1,148 +1,135 @@
 'use strict';
 
-var userName = prompt('What is your name?');
-
-while (userName === '' || userName === null) {
+let userName;
+function getName() {
+  userName = prompt('What is your name?');
+  while (userName === '' || userName === null) {
     userName = prompt('What is your name?');
+  }return userName;
 }
+getName();
 alert('Welcome ' + userName + ' to my webpage :)');
-
-alert('okay ' + userName + ' we are going to play a fun game, I will ask you five quastions and you can only answer either y/n, (y) for yes and (n) for no')
+alert('okay ' + userName + ' we are going to play a fun game, I will ask you seven quastions and you can only answer either y/n, (y) for yes and (n) for no');
 
 let correctAnswers = 0;
 
-var videoGames = prompt('Do you think I like playing video games?');
+let videoGames;
+function question1() {
+  videoGames = (prompt('Do you think I like playing video games?')).toLowerCase();
+  while (videoGames === '' || videoGames === null) {
+    videoGames = prompt('Do you think I like playing video games?');
+  }
 
-while (videoGames === '' || videoGames === null) {
-    var videoGames = prompt('Do you think I like playing video games?');
-}
-
-if (videoGames.toLowerCase() === 'y') {
-    alert('You are right, I like video games')
+  if (videoGames === 'y' || videoGames === 'yes') {
+    alert('You are right, I like video games');
     correctAnswers += 1;
-    // console.log('You are right, I like video games')
-} else {
-    alert('opps, you got this wrong')
-    // console.log('opps, you got this wrong')
+  // console.log('You are right, I like video games')
+  } else {
+    alert('opps, you got this wrong, I like video games');
+  // console.log('opps, you got this wrong')
+  }
 }
-
-var blackColor = prompt('Do you think I like black color?')
-
-while (blackColor === '' || blackColor === null) {
-    var blackColor = prompt('Do you think I like playing black color?')
-}
-
-if (blackColor.toLowerCase() === 'y') {
-    alert('You are right, I like black color')
+question1();
+let blackColor;
+function qusetion2(){
+  blackColor = (prompt('Do you think I like black color?')).toLowerCase();
+  while (blackColor === '' || blackColor === null) {
+    blackColor = prompt('Do you think I like playing black color?');
+  }
+  if (blackColor === 'y' || blackColor === 'yes') {
+    alert('You are right, I like black color');
     correctAnswers += 1;
     // console.log('You are right, I like black color')
-} else {
-    alert('opps, you got this wrong')
+  } else {
+    alert('opps, you got this wrong, I love black color');
     // console.log('opps, you got this wrong')
+  }
 }
-
-var cats = prompt('Do you think I like cats?')
-
-while (cats === '' || cats === null) {
-    var cats = prompt('Do you think I like cats?')
-}
-
-if (cats.toLowerCase() === 'n') {
-    alert('You are right, I do not like cats')
+qusetion2();
+let cats;
+function qusetion3(){
+  cats = (prompt('Do you think I like cats?')).toLowerCase();
+  while (cats === '' || cats === null) {
+    cats = prompt('Do you think I like cats?');
+  }
+  if (cats === 'n' || cats === 'no') {
+    alert('You are right, I do not like cats');
     correctAnswers += 1;
     // console.log('You are right, I do not like cats')
-} else {
-    alert('opps, you got this wrong')
+  } else {
+    alert('opps, you got this wrong, I don\'t like cats, I love dogs');
     // console.log('opps, you got this wrong')
+  }
 }
+qusetion3();
+let myAge;
+function question4() {
+  myAge = (prompt('Do you think I look younger than my real age?')).toLowerCase();
+  while (myAge === '' || myAge === null) {
+    myAge = prompt('Do you think I look younger than my real age?');
+  }
 
-var myAge = prompt('Do you think I look younger than my real age?')
-
-while (myAge === '' || myAge === null) {
-    var myAge = prompt('Do you think I look younger than my real age?')
-}
-
-if (myAge.toLowerCase() === 'y') {
-    alert('You are right, I look younger than my age')
+  if (myAge === 'y' || myAge === 'yes') {
+    alert('You are right, I look younger than my age');
     correctAnswers += 1;
-    // console.log('You are right, I look younger than my age')
-} else {
-    alert('opps, you got this wrong')
-    // console.log('opps, you got this wrong')
+  // console.log('You are right, I look younger than my age')
+  } else {
+    alert('opps, you got this wrong, I look younger than my age');
+  // console.log('opps, you got this wrong')
+  }
 }
-
-var user = prompt('Do you think I love you?')
-
-while (user === '' || user === null) {
-    var user = prompt('Do you think I love you?')
-}
-
-if (user.toLowerCase() === 'y') {
-    alert('You are right, I love you')
+question4();
+let user;
+function qusetion5(){
+  user = (prompt('Do you think I love you?')).toLowerCase(); 
+  while (user === '' || user === null) {
+    user = prompt('Do you think I love you?');
+  }
+  if (user === 'y' || user === 'yes') {
+    alert('You are right, I love you');
     correctAnswers += 1;
     // console.log('You are right, I love you')
-} else {
-    alert('opps, you got this wrong')
+  } else {
+    alert('opps, you got this wrong, I love you');
     //  console.log('opps, you got this wrong')
+  }
+}
+qusetion5();
+let ownerAge;
+for (let i = 0; i <= 3; i++) {
+  ownerAge = prompt('Can you guess mt age correctly? you have just 4 opportunities');
+  ownerAge = parseInt(ownerAge);
+  if (ownerAge === 19) {
+    alert('awesome! you got it correctly');
+    correctAnswers++;
+    break;
+  }else if (ownerAge > 19) {
+    alert('Too high');
+  } else if (ownerAge < 19) {
+    alert('Too low');
+  } else {
+    alert('Invalid answer, try again');
+  }
+}
+if (ownerAge !== 19) {
+  alert('My age is 19');
 }
 
-for (var i = 0; i <= 3; i++) {
-
-    var myAge = prompt('Can you guess mt age correctly? you have just 4 opportunities');
-    myAge = parseInt(myAge);
-
-    if (myAge === 19) {
-        alert('awesome! you got it correctly');
-        correctAnswers += 1;
-        break;
-    } else if (myAge > 19) {
-        alert('Too high');
-    } else if (myAge < 19) {
-        alert('Too low');
-    } else {
-        alert('Invalid answer, try again');
+let realMadrid = ['ronaldo', 'bale', 'casillas', 'pepe', 'ramos', 'marcelo'];
+let userTeam;
+let i = 0;
+let correctAnswer = false;
+while (i <= 5 && !correctAnswer) {
+  userTeam = (prompt('Can you name one of the players who played in RealMadrid in 2013? You have 6 opportunities')).toLowerCase();
+  for (let j = 0; j < realMadrid.length; j++){
+    if(realMadrid[j] === userTeam) {
+      alert('You such a clever');
+      correctAnswer = true;
+      correctAnswers++;
+      break;
     }
+  }
+  i++;
 }
-
-if (myAge !== 19) {
-    alert('My age is 19');
-}
-
-const realMadrid = ['Ronaldo', 'Bale', 'Casillas', 'Pepe', 'Ramos', 'Marcelo'];
-
-for (let i = 0; i < realMadrid.length; i++) {
-
-    let userTeam = (prompt('Can you name one of the players who played in RealMadrid in 2013?')).toLowerCase();
-
-    if (userTeam === 'ronaldo') {
-        alert('You such a clever');
-        correctAnswers += 1;
-        break;
-    } else if (userTeam === 'bale') {
-        alert('You such a clever');
-        correctAnswers += 1;
-        break;
-    } else if (userTeam === 'casillas') {
-        alert('You such a clever');
-        correctAnswers += 1;
-        break;
-    } else if (userTeam === 'pepe') {
-        alert('You such a clever');
-        correctAnswers += 1;
-        break;
-    } else if (userTeam === 'ramos') {
-        alert('You such a clever');
-        correctAnswers += 1;
-        break;
-    } else if (userTeam === 'marcelo') {
-        alert('You such a clever');
-        correctAnswers += 1;
-        break;
-    } else {
-        alert('Wrong answer, please try again')
-    }
-}
-
-alert('The correct answer are: ronaldo, bale, casillas, pepe, ramos and marcelo')
-
+alert('The correct answers are: ronaldo, bale, casillas, pepe, ramos and marcelo');
 alert('Thanks for playing ' + userName + ', you got ' + correctAnswers + ' answers correct');
