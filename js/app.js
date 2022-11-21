@@ -9,7 +9,7 @@ function getName() {
 }
 getName();
 alert('Welcome ' + userName + ' to my webpage :)');
-alert('okay ' + userName + ' we are going to play a fun game, I will ask you seven quastions and you can only answer either y/n, (y) for yes and (n) for no');
+alert('okay ' + userName + ' we are going to play a fun game, I will ask you seven quastions and you can only answer either y/n for the first five questions, (y) for yes and (n) for no');
 
 let correctAnswers = 0;
 
@@ -53,7 +53,7 @@ function qusetion3(){
     cats = prompt('Do you think I like cats?');
   }
   if (cats === 'n' || cats === 'no') {
-    alert('You are right, I do not like cats');
+    alert('You are right, I do not like cats, I like dogs');
     correctAnswers += 1;
     // console.log('You are right, I do not like cats')
   } else {
